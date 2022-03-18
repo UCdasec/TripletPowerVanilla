@@ -17,9 +17,9 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoa
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.models import load_model
 
-import tools.checking_tool as checking_tool
-import tools.process_data as process_data
-import tools.model_zoo as model_zoo
+import checking_tool
+import process_data
+import model_zoo
 
 
 def check_file_exists(file_path):

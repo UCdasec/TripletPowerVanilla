@@ -13,9 +13,9 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import to_categorical
 import matplotlib.pyplot as plt
 
-import tools.checking_tool as checking_tool
-import tools.process_data as process_data
-import tools.model_zoo as model_zoo
+import checking_tool
+import process_data
+import model_zoo
 
 
 # Compute the rank of the real key for a give set of predictions
