@@ -33,7 +33,39 @@ Below is the command line for the train and test the CNN based attack method, wh
                    --network_type choose_network_type{wang,cnn2,cnn,mlp}
                    --attack_window ATTACK_WINDOW
 
-### Contacts
+### Usage Examples
+For example, if you have the following specification:
+* training data is stored at ./dataset/xmega\_unmasked/PC1\_CB1\_TDX1\_K0\_U\_200k.npz
+* testing data is stored at ./dataset/xmega\_unmasked/PC1\_CB1\_TDX1\_K1\_U\_20k.npz
+* store your trained model at ./trained\_model/unmasked\_xmega\_cnn.h5
+* store your test results at ./test\_results/unmasked\_xmega\_cnn
+* choose the cnn2 network (the one same as in the ASCAD paper)
+* choose attack window [1800, 2800]
+* choose target byte 0
+
+Then you should run the following commands
+
+* Train:
+
+    python train.py --input ./dataset/xmega\_unmasked/PC1\_CB1\_TDX1\_K0\_U\_200k.npz
+                    --output ./trained\_model/unmasked\_xmega\_cnn.h5
+                    --verbose
+                    --target_byte 0
+                    --network_type cnn2
+                    --attack_window 1800\_2800
+
+* Test:
+
+    python test.py --input ./dataset/xmega\_unmasked/PC1\_CB1\_TDX1\_K1\_U\_20k.npz
+                   --output ./test\_results/unmasked\_xmega\_cnn
+                   --model_file ./trained\_model/unmasked\_xmega\_cnn.h5
+                   --verbose
+                   --target_byte 0
+                   --network_type cnn2
+                   --attack_window 1800\_2800
+
+
+## Contacts
 Chenggang Wang: wang2c9@mail.uc.edu, University of Cincinnati
 
 Boyang Wang: boyang.wang@uc.edu, University of Cincinnati
