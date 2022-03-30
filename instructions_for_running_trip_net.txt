@@ -1,0 +1,68 @@
+Instructions to obtain results on more bytes:
+	Navigate to the triplet/notebooks directory.
+	There are four notebooks that will be used for collecting results for more bytes:
+		1) Step 1 - Pre-Training -- Training a triplet model.ipynb
+		2) Step 2.1 - Fine-tuning - 2 -- Training 256 k-NN with N traces overall.ipynb
+		3) Step 3 - Ranks Generation -- 256 k-NN for XMEGA-STM32F - Unmasked & Masked.ipynb
+		4) Step 4 - Graph Generation -- 256 k-NN for XMEGA-STM32F - Unmasked-Masked.ipynb
+	Additional details of each individual notebook can be found within the notebook itself.
+		These details include a description of what the notebook does, a description of the input parameters, and the underlying code.
+		Some notebooks also contain functions found within the files of the triplet/utilities directory.
+	The above notebooks are run in order from notebook 1 to notebook 4.
+	Notebook time to complete (based off of lab machine. Specs found below):
+		1) ~2.75 hours
+		2) ~8 minutes
+		3) ~18 hours
+		4) ~20 seconds
+		Note:
+			Although it can be expected that these times are consistent across all of the different architectures and implementations (XMEGA/STM32F and unmasked/masked), these values are based off of the XMEGA-unmasked dataset usage)
+
+Instructions for finding points of interest:
+	Navigate to the triplet/notebooks directory.
+	There are two sets of notebooks that will be used for this.
+		Notebooks:
+			TVLA:
+				1) TVLA - 1.ipynb
+				2) TVLA - Graph Generation.ipynb
+				3) TVLA - Graph Comparison Generation.ipynb
+			NICV:
+				4) NICV - 1.ipynb
+				5) NICV - Graph Generation.ipynb
+				6) NICV - Graph Comparison Generation.ipynb
+	Additional details of each individual notebook can be found within the notebook itself.
+		These details include a description of what the notebook does, a description of the input parameters, and the underlying code.
+		Some notebooks also contain functions found within the files of the triplet/utilities directory.
+		Details of what these evaluation methods can be read from the following references:
+			TVLA: https://www.iacr.org/archive/ches2015/92930478/92930478.pdf
+			NICV: https://eprint.iacr.org/2013/717.pdf
+	The TVLA - 1.ipynb or NICV - 1.ipynb file must be ran prior to running the graph-related notebooks of each method.
+	Notebook time to complete (based off of lab machine. Specs found below):
+		1, 4) 5 mins - 15 mins
+		2, 3, 5, 6) Very little amount of time
+			
+Additional Notes:
+	target_byte parameter:
+		XMEGA/STM32F unmasked:
+			This value ranges from 0 to 15
+		XMEGA-masked:
+			This value ranges from 2 to 15
+	start_idx/end_idx:
+		XMEGA-unmasked:
+			start_idx: 1800
+			end_idx: 2800
+		STM32F3-unmasked:
+			start_idx: 1200
+			end_idx: 2200
+		XMEGA-masked:
+			start_idx: 1600
+			end_idx: 4500
+	Descriptions of the time for each notebook to complete is based on the lab machine used for experiements. These specs are:
+		Ubuntu 18.04
+		2.8GHz CPU
+		32GB memory
+		one NVIDIA Titan RTX GPU
+		
+		
+	
+			
+		
