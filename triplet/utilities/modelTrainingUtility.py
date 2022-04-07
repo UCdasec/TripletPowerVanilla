@@ -152,6 +152,34 @@ def load_test_data(params, clsNum=256):
     print('test data loaded successfully!')
     return test_traces, test_label, test_text_in, key
 
+def load_test_data_2(params, clsNum=256):
+    """
+    This function loads the dataset required for testing the model
+    :param params: dictionary containing the parameters of the dataset to be used for testing
+    :param clsNum: number of classes in the dataset (here 256)
+    :return: Testing power traces along with their labels, plaintext and key
+    """
+    # checking_tool.check_file_exists(ascad_database_file)
+    # in_file = h5py.File(ascad_database_file, "r")
+    print('loading the test data ...')
+    target_byte = params["target_byte"]
+    start_idx, end_idx = params["start_idx"], params["end_idx"]
+    file_name = params["input_path"]
+    print('processing data for key byte', target_byte)
+
+    try:
+        val_data_whole_pack = np.load(file_name)
+    except OSError:
+        print("could not access {}".format(file_name))
+        sys.exit()
+
+    test_traces, test_label, test_text_in, key = gen_features_labels(val_data_whole_pack, target_byte, start_idx,
+                                                                     end_idx)
+
+    test_label = to_categorical(test_label, clsNum)
+    print('test data loaded successfully!')
+    return test_traces, test_label, test_text_in, key
+
 
 # Compute the rank of the real key for a give set of predictions
 def rank(predictions, plaintext_list, real_key, min_trace_idx, max_trace_idx, last_key_bytes_proba, target_byte):
