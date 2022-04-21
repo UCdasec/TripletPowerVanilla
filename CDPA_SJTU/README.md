@@ -3,7 +3,8 @@
 We borrow the code from paper above and customized it to make it running over our dataset.
 
 ## Content
-```preprocess_data.ipynb``` is to convert our dataset to the format that can work on CDPA method.  
+
+### ```preprocess_data.ipynb``` is to convert our dataset to the format that can work on CDPA method.  
 
 Convert our dataset npz file, which includes attibutes ['power_trace', 'plain_text', 'key'], to multiple npy files. In addtion to that, it also generate corresopinding hamming weight lables. For example,
 
@@ -14,7 +15,7 @@ Where ```PC2_CB2_TDX3_K3_U_20k_0317.npz``` is our collected npz data file, ```X_
 To run the pre-processing script, you need to configure the parameters, such as the ```target_byte``` (which byte index the attack is to be performed on), ```start_idx``` and ```end_idx``` of attack window. Besides, you also need to sepcify the path of the npz file that need to convert.
 
 
-```XMEGA_CDPA_over_our_dataset.ipynb``` is to run CDPA over the converted dataset, which collected by us.
+### ```XMEGA_CDPA_over_our_dataset.ipynb``` is to run CDPA over the converted dataset, which collected by us.
 
 To run CDPA over the converted data, you need to config several parameters:
 * Parameters:
