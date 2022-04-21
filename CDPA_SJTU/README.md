@@ -17,7 +17,6 @@ To run the pre-processing script, you need to configure the parameters, such as 
 ```XMEGA_CDPA_over_our_dataset.ipynb``` is to run CDPA over the converted dataset, which collected by us.
 
 To run CDPA over the converted data, you need to config several parameters:
-
 * Parameters:
   * ```real_key_01```: the key of the source domain in hex value
   * ```real_key_02```: the key of the target domain in hex value
