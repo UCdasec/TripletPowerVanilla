@@ -18,10 +18,10 @@ To run the pre-processing script, you need to configure the parameters, such as 
 
 To run CDPA over the converted data, you need to config several parameters:
 
-Markup : * Parameters:
-            * ```real_key_01```: the key of the source domain in hex value
-            * ```real_key_02```: the key of the target domain in hex value
-            * ```source_file_path```: parent folder path for source data
-            * ```target_file_path```: parent folder path for target data
-            * ```trace_length```: the length of power trace (i.e., length of attack window)
-            * you may also need to modify length value based on the size of your data. such as ```train_num```, ```valid_num```, ```target_finetune_num```, ```target_test_num```
+* Parameters:
+  * ```real_key_01```: the key of the source domain in hex value
+  * ```real_key_02```: the key of the target domain in hex value
+  * ```source_file_path```: parent folder path for source data
+  * ```target_file_path```: parent folder path for target data
+  * ```trace_length```: the length of power trace (i.e., length of attack window)
+  * you may also need to modify length value based on the size of your data. such as ```train_num```, ```valid_num```, ```target_finetune_num```, ```target_test_num```
