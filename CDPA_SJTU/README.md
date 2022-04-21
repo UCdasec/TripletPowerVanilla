@@ -24,14 +24,4 @@ Markup : * Parameters:
             * ```trace_length```: the length of power trace (i.e., length of attack window)
             * you may also need to modify length value based on the size of your data. such as ```train_num```, ```valid_num```, ```target_finetune_num```, ```target_test_num```
             
-Markup : * Bullet list
-           * Nested bullet
-           * Sub-nested bullet etc
-           * Bullet list item 2
 
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
