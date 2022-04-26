@@ -39,7 +39,21 @@ Instructions for finding points of interest:
 	Notebook time to complete (based off of lab machine. Specs found below):
 		1, 4) 5 mins - 15 mins
 		2, 3, 5, 6) Very little amount of time
-			
+	
+Dependencies:
+	The following are a list of current library versions being run within the triplet directory.
+		Python: 3.6.12 ANACONDA
+		Pandas: 1.1.3
+		tensorflow: 2.3.1
+		matplotlib: 3.3.4
+		numpy: 1.19.5
+		sklearn: 0.23.2
+	Misc:
+		Install ipython-autotime
+	The libraries were installed in the above order from top-to-bottom. It's likely that some packages will reinstall up-to-date versions of the earlier libraries.
+	
+	
+	
 Additional Notes:
 	target_byte parameter:
 		XMEGA/STM32F unmasked:
@@ -61,8 +75,3 @@ Additional Notes:
 		2.8GHz CPU
 		32GB memory
 		one NVIDIA Titan RTX GPU
-		
-		
-	
-			
-		
