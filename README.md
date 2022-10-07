@@ -1,4 +1,6 @@
-# TripletPower
+# TripletPowerVanilla
+
+This is the vanilla verson of TripletPower. The method was not entirely correct. 
 
 
 # Contacts
